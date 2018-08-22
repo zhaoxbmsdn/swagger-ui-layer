@@ -112,6 +112,7 @@ function getData(operationId){
 	   type: $("[m_operationId='"+operationId+"']").attr("method"),
 	   url: path,
 	   data: parameterJson,
+       contentType:$("[m_operationId='"+operationId+"']").attr("consumes"),
 	   dataType: 'json',
 	   success: function(data){
 	     var options = {
